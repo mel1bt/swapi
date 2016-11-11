@@ -1,0 +1,10 @@
+.total {
+    background-color: black;
+    color: #ffc107 ;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#species{
+  display: block;
+}
