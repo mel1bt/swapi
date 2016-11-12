@@ -58,15 +58,16 @@ $(document).ready(function(){
     var cards = function (response){
          var personaje  = "";
          personaje += template.replace("{{name}}", response.name);
-         $("#people").append(personaje);
-        console.log(response.name);
-      
+         $("#people").append(personaje);     
        };
   
     $("#species").change(function(event){
-      console.log($(this).val());
-      var numEsp = $(this).val().split(",");
+      var cadena = $(this).val();
       $("#people").html("");
+      var numEsp = cadena.split(",");
+      console.log(numEsp);
+      $("#people").html("");
+      
       for(var i=0; i< numEsp.length; i++){
         var nuevoLink = "https://swapi.co/api/people/" + numEsp[i] + "/" ; 
         $.getJSON(nuevoLink, cards);
