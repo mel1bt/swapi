@@ -45,7 +45,7 @@ $(document).ready(function(){
    var formatResponseSpecie = function (response){
      $.each(response.results, function(i, specie){
        var numPeople = "";
-       var url = "http://swapi.co/api/people/";
+       var url = "https://swapi.co/api/people/";
        $.each(specie.people, function(i, link){
 				numPeople += link.replace(url, "").replace("/",",");
 			});
